@@ -3,7 +3,7 @@
 ---
 
 > [!important]  
-> Hello! I'm Alva, a multidisciplinary designer based in San Francisco. With over 8 years of experience, I thrive at the intersection of digital design, UX/UI, and brand identity. My passion lies in crafting seamless user experiences and visually compelling designs that resonate with audiences and drive engagement.  
+> Hello! I'm Alva, ok a multidisciplinary designer based in San Francisco. With over 8 years of experience, I thrive at the intersection of digital design, UX/UI, and brand identity. My passion lies in crafting seamless user experiences and visually compelling designs that resonate with audiences and drive engagement.  
 
 ![Personal Website-20240917000142328.webp](/img/user/%F0%9F%8F%A0%20Al/%F0%9F%91%A4%20Personal%20Website/Personal%20Website-20240917000142328.webp)
 
@@ -74,3 +74,5 @@ Let's create something amazing together! Reach out to me at:
 - Portfolio: [adaleedesigns.com](http://adaleedesigns.com/)
 
 Thanks for stopping by my corner of the internet! 💫
+
+[Fetching Title#jome](https://www.youtube.com/watch?v=eULVrTjT11w)
