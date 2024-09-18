@@ -94,6 +94,9 @@ function getAnchorAttributes(filePath, linkTitle) {
 const tagRegex = /(^|\s|\>)(#[^\s!@#$%^&*()=+\.,\[{\]};:'"?><]+)(?!([^<]*>))/g;
 
 module.exports = function(eleventyConfig) {
+  let permalinksMap = new Map();
+
+  // Log iniziale prima del build
   eleventyConfig.on('beforeBuild', () => {
     console.log('Building the site...');
   });
@@ -102,14 +105,22 @@ module.exports = function(eleventyConfig) {
     console.log('Eleventy is about to run.');
   });
 
-  // Regole per permalinks duplicati
+  // Controllo e log dei permalinks generati
   eleventyConfig.addTransform("check-permalink", function(content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
       console.log("Generated output:", outputPath);
+      
+      // Controlla se il permalink è già stato generato
+      if (permalinksMap.has(outputPath)) {
+        console.log(`⚠️ Duplicate permalink detected: ${outputPath}`);
+      } else {
+        permalinksMap.set(outputPath, true);  // Aggiungi il permalink alla mappa
+      }
     }
     return content;
   });
 };
+
 
 
   let markdownLib = markdownIt({
