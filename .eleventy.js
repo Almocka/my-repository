@@ -93,10 +93,15 @@ function getAnchorAttributes(filePath, linkTitle) {
 
 const tagRegex = /(^|\s|\>)(#[^\s!@#$%^&*()=+\.,\[{\]};:'"?><]+)(?!([^<]*>))/g;
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.setLiquidOptions({
-    dynamicPartials: true,
-  });
+module.exports = function(eleventyConfig) {
+  eleventyConfig.setUseGitIgnore(false);
+
+  // Aggiungi questa linea per disattivare il controllo sui permalinks duplicati (temporaneo)
+  eleventyConfig.setCheckForDuplicatePermalinks(false);
+
+  // Altre configurazioni...
+};
+
   let markdownLib = markdownIt({
     breaks: true,
     html: true,
